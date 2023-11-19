@@ -1,0 +1,25 @@
+﻿<Window x:Class="Lab5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Enter start of interval:"/>
+            <TextBox x:Name="StartTextBox" Width="100"/>
+
+            <TextBlock Text="Enter end of interval:"/>
+            <TextBox x:Name="EndTextBox" Width="100" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Enter step:"/>
+            <TextBox x:Name="StepTextBox" Width="100" Margin="0,0,0,10"/>
+
+            <Button Content="Calculate" Click="CalculateButton_Click" Margin="0,0,0,10" Width="397"/>
+
+            <ListBox x:Name="ResultListBox" Width="400" Height="200"/>
+        </StackPanel>
+    </Grid>
+</Window>
