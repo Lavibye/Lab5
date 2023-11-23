@@ -15,14 +15,13 @@ using System.Windows.Shapes;
 
 namespace Lab5
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly ISeriesCalculator seriesCalculator;
         public MainWindow()
         {
             InitializeComponent();
+            seriesCalculator = new SeriesCalculator();
         }
         private void CalculateButton_Click(object sender, RoutedEventArgs e)
         {
@@ -36,8 +35,8 @@ namespace Lab5
             {
                 int iterations = 5;
 
-                double resultLoop = SeriesCalculator.CalculateSeriesWithLoop(x, iterations);
-                double resultRecursion = SeriesCalculator.CalculateSeriesWithRecursion(x, iterations);
+                double resultLoop = seriesCalculator.CalculateSeriesWithLoop(x, iterations);
+                double resultRecursion = seriesCalculator.CalculateSeriesWithRecursion(x, iterations);
 
                 ResultListBox.Items.Add($"x: {x}, y(цикл): {resultLoop:F3}, y(рекурсія): {resultRecursion:F3}");
             }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lab5
 {
-    public class SeriesCalculator
+    public class SeriesCalculator : ISeriesCalculator
     {
-        public static double CalculateSeriesWithLoop(double x, int iterations)
+        public double CalculateSeriesWithLoop(double x, int iterations)
         {
             double result = Math.PI / 2;
 
@@ -20,7 +20,7 @@ namespace Lab5
             return result;
         }
 
-        public static double CalculateSeriesWithRecursion(double x, int n)
+        public double CalculateSeriesWithRecursion(double x, int n)
         {
             if (n == 0)
             {
