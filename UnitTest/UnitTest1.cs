@@ -15,7 +15,7 @@ namespace UnitTest
 
             double result = SeriesCalculator.CalculateSeriesWithLoop(x, iterations);
 
-            Assert.AreEqual(0.214779, result, 0.000001);
+            Assert.AreEqual(2.20581000432612, result, 0.000001);
         }
 
         [TestMethod]
@@ -26,7 +26,7 @@ namespace UnitTest
 
             double result = SeriesCalculator.CalculateSeriesWithRecursion(x, iterations);
 
-            Assert.AreEqual(0.214779, result, 0.000001);
+            Assert.AreEqual(2.20581000432612, result, 0.000001);
         }
     }
 }

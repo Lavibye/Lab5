@@ -34,7 +34,7 @@ namespace Lab5
 
             for (double x = start; x <= end; x += step)
             {
-                int iterations = 5; // Змініть кількість ітерацій за потребою
+                int iterations = 5;
 
                 double resultLoop = SeriesCalculator.CalculateSeriesWithLoop(x, iterations);
                 double resultRecursion = SeriesCalculator.CalculateSeriesWithRecursion(x, iterations);
